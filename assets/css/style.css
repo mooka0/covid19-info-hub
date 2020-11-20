@@ -9,3 +9,28 @@ body {
 #scroll {
     overflow: scroll;
 }
+
+.value {
+    text-align: center;
+    color: red;
+}
+
+#new-deaths {
+    color:red;
+}
+
+#total-state-cases {
+    color: blue;
+}
+
+#total-state-deaths {
+    color: blue;
+}
+
+#totalUS {
+    color: green;
+}
+
+#USdeaths {
+    color: green; 
+}
