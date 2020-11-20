@@ -17,7 +17,6 @@
         <h2 class="ui center aligned icon header">
             </br><i class="hospital outline icon"></i>Covid-19 Information Hub</h2>
         <!-- search bar -->
-     
 
         <div class="ui segment">
             <div class="ui left dividing rail">
@@ -31,7 +30,7 @@
                 <div class="sixteen wide column">
                     <div class="ui category search ">
                         <div class="ui icon input search-bar">
-                            <input class="prompt" type="text" placeholder="Search State">
+                            <input id = "search" class="prompt" type="text" placeholder="Search State">
                             <i class="search icon"></i>
                         </div>
                         <div class="results"></div>
@@ -45,7 +44,7 @@
                     <div class="column">
                         <div class="ui fluid red card">
                             <div class="content">
-                                <div class=" center aligned header">State</div>
+                                <div class=" center aligned header"><span id = "state">State</span>></div>
                             </div>
                             <div class="center aligned content">
                                 <h4 class="ui sub header">New Cases</h4>
@@ -137,9 +136,9 @@
                             <div class="content">
                                 <div class="center aligned header">Today's News</div>
                             </div>
-                            <div class="content center aligned">
-                                <h4 class="ui sub header"><span id="newsArticle">insert news article title</span></h4>
-                                <h4 class="ui sub header">link to article?</h4>
+                            <div id = "article-container" class="content center aligned">
+                                <!-- <h4 class="ui sub header"><span id="newsArticle">insert news article title</span></h4>
+                                <h4 class="ui sub header">link to article?</h4> -->
                             </div>
                         </div>
                     </div>
