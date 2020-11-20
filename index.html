@@ -1,11 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Covid-19 Info Hub</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body>
-    <h1> covid</h1>
+
+    <div class="ui container ">
+        <h2 class="ui center aligned icon header">
+            </br><i class="hospital outline icon"></i>Covid-19 Information Hub</h2>
+        <!-- search bar -->
+
+        <div class="ui segment">
+            <div class="ui left dividing rail">
+              <div class="ui segment">
+                <a class="twitter-timeline" href="https://twitter.com/CDCgov?ref_src=twsrc%5Etfw"
+                        data-tweet-limit="2" data-width="300" data-height="300">Tweets by CDCgov</a>
+                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+              </div>
+            </div>
+            <div class="ui grid center aligned">
+                <div class="sixteen wide column">
+                    <div class="ui category search ">
+                        <div class="ui icon input search-bar">
+                            <input id = "search" class="prompt" type="text" placeholder="Search State">
+                            <i class="search icon"></i>
+                        </div>
+                        <div class="results"></div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="ui stackable grid">
+                <!-- state info -->
+                <div class="two column row">
+                    <div class="column">
+                        <div class="ui fluid red card">
+                            <div class="content">
+                                <div class=" center aligned header"><span id = "state">State</span>></div>
+                            </div>
+                            <div class="center aligned content">
+                                <h4 class="ui sub header">New Cases</h4>
+                                <div class="ui small feed">
+                                    <div class="event">
+                                        <div class=" content">
+                                            <div class="center aligned summary">
+                                                <h3 id="new-cases">1000</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h4 class="ui sub header">New Deaths</h4>
+                                <div class="ui small feed">
+                                    <div class="event">
+                                        <div class="content">
+                                            <div class="summary center aligned ">
+                                                <h3 id="new-deaths">36</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="ui fluid red card">
+                            <div class="content">
+                                <div class=" center aligned header">State Total</div>
+                            </div>
+                            <div class="center aligned content">
+                                <h4 class="ui sub header">State Cases</h4>
+                                <div class="ui small feed">
+                                    <div class="event">
+                                        <div class="content">
+                                            <div class=" summary center aligned ">
+                                                <h3 id="total-state-cases">1000</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h4 class="ui sub header">State Deaths</h4>
+                                <div class="ui small feed">
+                                    <div class="event">
+                                        <div class="content">
+                                            <div class="summary center aligned ">
+                                                <h3 id="total-state-deaths">36</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- US/News -->
+                <div class="two column row ">
+                    <div class="column">
+                        <div class="ui fluid red card">
+                            <div class="center aligned content">
+                                <div class="header">US Total</div>
+                            </div>
+                            <div class="center aligned content">
+                                <h4 class="ui sub header">Total Cases</h4>
+                                <div class="ui small feed">
+                                    <div class="event">
+                                        <div class="content">
+                                            <div class="summary center aligned">
+                                                <h3 id="totalUS">11.6M</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h4 class="ui sub header">Total Deaths</h4>
+                                <div class="ui small feed">
+                                    <div class="event">
+                                        <div class="content">
+                                            <div class="summary center aligned">
+                                                <h3 id="USdeaths">250K</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+                    </div>
+                    <div class="column">
+                        <div class="ui fluid red card">
+                            <div class="content">
+                                <div class="center aligned header">Today's News</div>
+                            </div>
+                            <div id = "article-container" class="content center aligned">
+                                <!-- <h4 class="ui sub header"><span id="newsArticle">insert news article title</span></h4>
+                                <h4 class="ui sub header">link to article?</h4> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+    </div>
+
+    <script src="./assets/js/style.js"></script>
 </body>
+
 </html>
