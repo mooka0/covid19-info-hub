@@ -4,6 +4,7 @@ body {
     background-image: url("https://www.dphealthnow.com/wp-content/uploads/2016/05/blue-medical-background.jpg");
     background-size: cover;
     background-position: center;
+    animation:background_anim 200s linear infinite;
 }   
 
 #scroll {
@@ -34,3 +35,9 @@ body {
 #USdeaths {
     color: green; 
 }
+/* makes background move */
+@keyframes background_anim{
+    0%{background-position:0 0;}
+    100%{background-position:-2122px 0;}
+}
+
