@@ -8,7 +8,7 @@ var searchCovid = function (){
     var searchInput = document.querySelector('#search').value;
     fetch (
         'https://api.covidtracking.com/v1/states/current.json'
-        // add + searchInput + "states/current.json"
+        
     )
     .then (function(response){
         return response.json();
