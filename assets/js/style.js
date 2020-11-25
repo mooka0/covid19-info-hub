@@ -102,4 +102,3 @@ var displayUsData = function(UsData){
     var usDeath = UsData[0].death.toLocaleString();
     UsDeath.append(usDeath);
 }
-
