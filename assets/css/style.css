@@ -5,6 +5,7 @@ body {
     background-size: cover;
     background-position: center;
     animation:background_anim 200s linear infinite;
+    overflow: auto;
 }   
 
 #scroll {
