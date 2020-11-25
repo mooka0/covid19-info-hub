@@ -5,7 +5,7 @@ body {
     background-size: cover;
     background-position: center;
     animation:background_anim 200s linear infinite;
-    overflow: auto;
+    
 }   
 
 #scroll {
@@ -48,5 +48,14 @@ body {
     background:#fff; 
     border-radius:3px; 
     box-shadow:2px 2px 3px rgba(0,0,0,.1); 
+    overflow: auto;
+}
+
+.us-total {
+    background: linear-gradient(to right, #ff0000, 
+    #FFFFFF, #0000ff); 
+    -webkit-text-fill-color: transparent; 
+    -webkit-background-clip: text; 
+    -webkit-text-stroke: 1px grey;
 }
 
