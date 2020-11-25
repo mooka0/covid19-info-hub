@@ -9,6 +9,10 @@ var state = $("#state");
 var date = $("#date");
 var UsTotal = $("#totalUs");
 var UsDeath = $("#usDeaths");
+var newsTitle = document.getElementById(newsArticle);
+var articleLink = document.getElementById(linkEl);
+
+
 
 
 $(document).ready(function () {
@@ -104,7 +108,6 @@ var displayUsData = function(UsData){
 }
 
 var usNews = function(){
-    console.log('hello')
     fetch(
        'https://api.nytimes.com/svc/search/v2/articlesearch.json?q=coronavirus&api-key=7V4py5nDHs5IQKqEAeirNycVjA5rAJtK'
     )
@@ -113,6 +116,11 @@ var usNews = function(){
     })
     .then(function (response){
         console.log(response);
+        var articleTitle = response.response.docs[1].headline.main;
+        newsArticle.append(articleTitle);
+        var newsURL = response.response.docs[1].web_url;
+        console.log(newsURL);
+        linkEl.append(newsURL);
     })
 }
 usNews();
