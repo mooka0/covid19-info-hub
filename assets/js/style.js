@@ -102,3 +102,17 @@ var displayUsData = function(UsData){
     var usDeath = UsData[0].death.toLocaleString();
     UsDeath.append(usDeath);
 }
+
+var usNews = function(){
+    console.log('hello')
+    fetch(
+       'https://api.nytimes.com/svc/search/v2/articlesearch.json?q=coronavirus&api-key=7V4py5nDHs5IQKqEAeirNycVjA5rAJtK'
+    )
+    .then (function (response){
+        return response.json();
+    })
+    .then(function (response){
+        console.log(response);
+    })
+}
+usNews();
