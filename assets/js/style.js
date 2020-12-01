@@ -11,6 +11,7 @@ var UsTotal = $("#totalUs");
 var UsDeath = $("#usDeaths");
 var newsTitle = document.getElementById(newsArticle);
 var articleLink = document.getElementById(linkEl);
+var newsHyperlink = document.getElementById(newsLink);
 
 
 
@@ -52,14 +53,14 @@ var stateSearch = function (state) {
 
 }
 
-var getUsTotals = function(){
+var getUsTotals = function () {
     var usApi = 'https://api.covidtracking.com/v1/us/current.json';
     fetch(usApi)
 
         .then(function (response) {
             if (response.ok) {
                 response.json().then(function (data) {
-                 displayUsData(data);
+                    displayUsData(data);
                 })
             } else {
                 alert("error: " + response.statusText);
@@ -100,27 +101,27 @@ var displayStateData = function (currentData) {
 
 }
 
-var displayUsData = function(UsData){
+var displayUsData = function (UsData) {
     var usTotal = UsData[0].positive.toLocaleString();
     UsTotal.append(usTotal);
     var usDeath = UsData[0].death.toLocaleString();
     UsDeath.append(usDeath);
 }
 
-var usNews = function(){
+var usNews = function () {
     fetch(
-       'https://api.nytimes.com/svc/search/v2/articlesearch.json?q=coronavirus&api-key=7V4py5nDHs5IQKqEAeirNycVjA5rAJtK'
+        'https://api.nytimes.com/svc/search/v2/articlesearch.json?q=coronavirus&api-key=7V4py5nDHs5IQKqEAeirNycVjA5rAJtK'
     )
-    .then (function (response){
-        return response.json();
-    })
-    .then(function (response){
-        console.log(response);
-        var articleTitle = response.response.docs[1].headline.main;
-        newsArticle.append(articleTitle);
-        var newsURL = response.response.docs[1].web_url;
-        console.log(newsURL);
-        linkEl.append(newsURL);
-    })
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (response) {
+            console.log(response);
+            var articleTitle = response.response.docs[1].headline.main;
+            newsArticle.append(articleTitle);
+            var newsURL = response.response.docs[1].web_url;
+            console.log(newsURL);
+        })
 }
 usNews();
+
