@@ -61,3 +61,15 @@ body {
 #searchBar {
     margin-top: 60px;
 }
+
+#usRecovered {
+    color: green;
+}
+
+#usDeaths {
+    color: red;
+}
+
+#total-state-recovered {
+    color: green;
+}
