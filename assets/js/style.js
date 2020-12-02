@@ -123,5 +123,6 @@ var usNews = function () {
             console.log(newsURL);
         })
 }
+
 usNews();
 
