@@ -58,3 +58,6 @@ body {
     -webkit-text-stroke: 1px grey;
 }
 
+#searchBar {
+    margin-top: 60px;
+}
