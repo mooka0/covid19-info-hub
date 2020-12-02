@@ -58,3 +58,18 @@ body {
     -webkit-text-stroke: 1px grey;
 }
 
+#searchBar {
+    margin-top: 60px;
+}
+
+#usRecovered {
+    color: green;
+}
+
+#usDeaths {
+    color: red;
+}
+
+#total-state-recovered {
+    color: green;
+}
