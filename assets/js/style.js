@@ -11,10 +11,6 @@ var UsTotal = $("#totalUs");
 var UsDeath = $("#usDeaths");
 var newsTitle = $("#newsArticle");
 
-
-
-
-
 $(document).ready(function () {
     getUsTotals();
     usNews();
@@ -35,7 +31,6 @@ $("select")
 var stateSearch = function (state) {
     var apiUrl = 'https://api.covidtracking.com/v1/states/' + state + '/current.json';
     fetch(apiUrl)
-
         .then(function (response) {
             if (response.ok) {
                 response.json().then(function (data) {
@@ -43,21 +38,16 @@ var stateSearch = function (state) {
                 })
             } else {
                 alert("error: " + response.statusText);
-
             }
-
         })
         .catch(function (error) {
             alert("Unable to connect to covidAPI");
         });
-
-
 }
 // fetches covid api
 var getUsTotals = function () {
     var usApi = 'https://api.covidtracking.com/v1/us/current.json';
     fetch(usApi)
-
         .then(function (response) {
             if (response.ok) {
                 response.json().then(function (data) {
@@ -65,9 +55,7 @@ var getUsTotals = function () {
                 })
             } else {
                 alert("error: " + response.statusText);
-
             }
-
         })
         .catch(function (error) {
             alert("Unable to connect to covidAPI");
@@ -85,15 +73,12 @@ var usNews = function () {
                 })
             } else {
                 alert("error: " + response.statusText);
-
             }
-
         })
         .catch(function (error) {
             alert("Unable to connect to newsAPI");
         });
 }
-
 // display's state current data
 var displayStateData = function (currentData) {
     // empties out state numbers before new search
@@ -120,7 +105,6 @@ var displayStateData = function (currentData) {
     stateTotalDeaths.append(totalStateDeaths);
     var cDate = new Date(currentData.dateModified).toLocaleDateString();
     date.append(cDate);
-
 }
 // displays US data
 var displayUsData = function (UsData) {
