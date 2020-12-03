@@ -11,6 +11,8 @@ var UsTotal = $("#totalUs");
 var UsDeath = $("#usDeaths");
 var newsTitle = $("#newsArticle");
 var historyContainer = $("#history-container");
+var usRecovered = document.getElementById("usRecovered");
+var recoveredState = $("#total-state-recovered");
 
 // if nothing in local storage, sets search history to empty array
 var searchHistory = JSON.parse(localStorage.getItem("state")) || [];
@@ -104,6 +106,7 @@ var displayStateData = function (currentData) {
     stateTotalDeaths.empty();
     state.empty();
     date.empty();
+    recoveredState.empty();
     // selects dropdown menu and sets the states name to the header of the top middle card
     var stateName = "";
     $("select option:selected").each(function () {
@@ -121,6 +124,9 @@ var displayStateData = function (currentData) {
     stateTotalDeaths.append(totalStateDeaths);
     var cDate = new Date(currentData.dateModified).toLocaleDateString();
     date.append(cDate);
+    var stateRecovered = currentData.recovered.toLocaleString();
+    console.log(stateRecovered);
+    recoveredState.append(stateRecovered);
 }
 // displays US data
 var displayUsData = function (UsData) {
@@ -128,6 +134,9 @@ var displayUsData = function (UsData) {
     UsTotal.append(usTotal);
     var usDeath = UsData[0].death.toLocaleString();
     UsDeath.append(usDeath);
+    var recoveredUS = UsData[0].recovered.toLocaleString();
+    usRecovered.append(recoveredUS);
+
 }
 // displays news link
 var displayNews = function (news) {
