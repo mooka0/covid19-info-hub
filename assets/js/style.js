@@ -10,11 +10,24 @@ var date = $("#date");
 var UsTotal = $("#totalUs");
 var UsDeath = $("#usDeaths");
 var newsTitle = $("#newsArticle");
+var historyContainer = $("#history-container");
 
+// if nothing in local storage, sets search history to empty array
+var searchHistory = JSON.parse(localStorage.getItem("state")) || [];
 $(document).ready(function () {
     getUsTotals();
     usNews();
+    // gets each value from array and sends it to display history function 
+    for (i = 0; i < searchHistory.length; i++) {
+        var history = searchHistory[i];
+        displayHistory(history);
+    }
 });
+var displayHistory = function (history) {
+    // creates list of search history
+    var hisBtn = $("<p>").addClass("circular ui icon label").text(history);
+    historyContainer.prepend(hisBtn);
+};
 // listens for a change to the value of the dropdown, then sends value to api 
 $("select")
     .change(function () {
@@ -23,10 +36,13 @@ $("select")
             str += $(this).val();
             if (str) {
                 stateSearch(str);
+                searchHistory.push(str);
+                localStorage.setItem("state", JSON.stringify(searchHistory));
             }
         });
     })
     .change();
+
 // fetches state data
 var stateSearch = function (state) {
     var apiUrl = 'https://api.covidtracking.com/v1/states/' + state + '/current.json';
