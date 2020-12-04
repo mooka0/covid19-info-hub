@@ -17,7 +17,7 @@ THEN I am again presented with current and future conditions for that state<br>
 ```
 git clone git@github.com:mooka0/covid19-info-hub.git
 ```
-<!-- [working deployed link recording]() -->
+[working deployed link recording](https://drive.google.com/file/d/1l1bQg75-c6RTHK9R1Ob2kaZNl9TPu8wv/view)
 
 ![Screen Shot 2020-12-03 at 6 03 00 PM](https://user-images.githubusercontent.com/66394427/101112622-98ccfb80-3592-11eb-8aef-6b1976362248.png)
 
