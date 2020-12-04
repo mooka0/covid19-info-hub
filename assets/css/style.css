@@ -21,12 +21,10 @@ body {
     color:red;
 }
 
-#total-state-cases {
-    color: blue;
-}
+
 
 #total-state-deaths {
-    color: blue;
+    color: red;
 }
 
 #totalUS {
@@ -34,7 +32,7 @@ body {
 }
 
 #USdeaths {
-    color: green; 
+    color: red; 
 }
 /* makes background move */
 @keyframes background_anim{
@@ -45,18 +43,12 @@ body {
     max-height:400px; 
     max-width:320px; 
     padding:20px; 
-    background:#fff; 
+    background: rgb(244, 244, 239);; 
     border-radius:3px; 
     box-shadow:2px 2px 3px rgba(0,0,0,.1); 
     overflow: auto;
 }
 
-.us-total {
-    background: linear-gradient(to right, #ff0000, 
-    #FFFFFF, #0000ff); 
-    -webkit-text-fill-color: transparent; 
-    -webkit-text-stroke: 1px grey;
-}
 
 #searchBar {
     margin-top: 60px;
@@ -72,4 +64,21 @@ body {
 
 #total-state-recovered {
     color: green;
+}
+
+.ui.card>.content,
+.ui.cards>.card>.content {
+  background-color: rgb(244, 244, 239);
+  box-shadow:2px 2px 3px rgba(0,0,0,.1); 
+}
+
+
+.ui.card,
+.ui.cards>.card {
+  background-color:  rgb(244, 244, 239);;
+}
+
+
+.ui.center.aligned.search.dropdown {
+    background-color:  rgb(244, 244, 239);
 }
