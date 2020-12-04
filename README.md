@@ -19,6 +19,6 @@ git clone git@github.com:mooka0/covid19-info-hub.git
 ```
 <!-- [working deployed link recording]() -->
 
-![Uploading Screen Shot 2020-12-03 at 6.03.00 PM.png…]()
+![Screen Shot 2020-12-03 at 6 03 00 PM](https://user-images.githubusercontent.com/66394427/101112622-98ccfb80-3592-11eb-8aef-6b1976362248.png)
 
 [COVID-19 Information Hub page](https://mooka0.github.io/covid19-info-hub/)
